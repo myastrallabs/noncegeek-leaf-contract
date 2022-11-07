@@ -4,13 +4,13 @@
 
 1. Initialize the aptos configuration, if you don't already have it
 ```shell
-# create marketplace addr
+# create leaf addr
 aptos init --profile leaf
 
-# create minter 1 addr
+# create minter1 addr
 aptos init --profile minter1
 
-# create minter 2 addr
+# create minter2 addr
 aptos init --profile minter2
 ```
 
@@ -65,6 +65,26 @@ aptos move run --function-id 'leaf::LEAF::mint_script' --profile=minter2
     },
     "uri": "https://localhost:4000/nft_images/aptos-zero/1"
 }
+```
+
+## Event Detail
+
+```shell
+[
+	{
+		"version": "335819765",
+		"guid": {
+			"creation_number": "5",
+			"account_address": "0x64a2981664ece2680e8ddae825729c693d0f9bfabaa40c19b1660091966a747"
+		},
+		"sequence_number": "0",
+		"type": "0x62398bae6a6ab490143e374a006ea3b1fcafe655fcca5adfcd30d5a0a315c38::LEAF::MintEvent",
+		"data": {
+			"counter": "1",
+			"owner_address": "0xe698622471b41a92e13ae893ae4ff88b20c528f6da2bedcb24d74646bf972dc3"
+		}
+	}
+]
 ```
 
 ## **Features**
